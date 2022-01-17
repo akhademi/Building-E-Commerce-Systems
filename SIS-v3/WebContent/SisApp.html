@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="res/mc.css" title="eecs4413" media="all" />
+<script type="text/javascript" src="res/mc.js">
+	;
+</script>
+<title>Student Information System</title>
+</head>
+<body>
+<form action="Sis" method="POST" class="sisForm" onsubmit="return validate();">
+<fieldset>
+<legend>SIS-v3</legend>
+<LABEL for="prefix">Name Prefix:</LABEL>
+	<INPUT name="prefix" id="prefix" value=""></INPUT><br/><br/>
+<LABEL for="credit">Minimum Credit:</LABEL>
+	<INPUT type="number" step="1" name="credit" id="credit" value=""></INPUT><br/>
+<BUTTON onclick="reportAjax('/SIS-v2/Sis'); return false;">Report Ajax</BUTTON>
+<BUTTON type="submit" value="XML"  id="XML" name="XML">Report XML</BUTTON>
+<BUTTON type="submit" value="JSON" id="JSON" name="JSON">Report JSON</BUTTON>
+
+
+</fieldset>
+<p id="result"></p>
+</form>
+<div >
+	<br/>
+	<p id="ajaxTarget">
+	</p>	
+	<br/>
+</div>
+<div id="footer-div">	
+<footer class='footer'>
+<IMG alt="Lassonde" src="res/logo.png" /><br/>
+York University
+</footer>
+</div>
+</body>
+</html>
